@@ -1,0 +1,6 @@
+﻿@{
+    Layout = "~/Features/Shared/_Layout.cshtml";
+}
+@{
+    Layout = Request.IsAjaxRequest() ? "~/Features/Shared/_LayoutAjax.cshtml" : "~/Features/Shared/_Layout.cshtml";
+}

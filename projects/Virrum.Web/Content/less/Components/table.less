@@ -1,0 +1,121 @@
+﻿
+.table-auto-width {
+    width: auto;
+}
+
+table.table-virrum {
+    border: 0; //1px solid @light-border-color;
+    table-layout: fixed;
+
+    thead tr {
+        background: @vir-gray;
+        border: 2px solid @heading-outer-border-color;
+
+        th {
+            border: 1px solid @heading-outer-border-color;
+            padding: 5px @table-cell-padding;
+            color: @vir-font-gray;
+            user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -moz-user-select: none;
+
+            span.title {
+                display: block;
+
+                input[type=checkbox] {
+                    margin-top: 0;
+                }
+
+                &.clickable {
+                    cursor: pointer;
+
+                    &:active {
+                        background: @selected-background-color;
+                    }
+                }
+            }
+
+            &.group-list-date {
+                padding-top: 10px;
+                padding-bottom: 5px;
+                background: white;
+
+                span {
+                    font-weight: normal;
+                }
+            }
+        }
+
+
+        + tr {
+            background: #efefef;
+        }
+    }
+
+    tbody tr {
+        a {
+            font-weight: normal;
+            color: black;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+
+        &.active td {
+            background-color: @component-active-bg;
+        }
+
+        th {
+            border: 1px solid @medium-border-color;
+            font-weight: normal;
+
+            td {
+                background: @light-background-color;
+                padding: 3px @table-cell-padding 0 @table-cell-padding;
+            }
+
+            &.clickable {
+                &:active {
+                    color: @component-active-color;
+                    background: @component-active-bg;
+                }
+            }
+        }
+
+        td {
+            background-color: white;
+            padding: 5px @table-cell-padding 0 @table-cell-padding;
+
+            &.list-title {
+                font-size: 16px;
+                font-weight: bold;
+                color: @vir-font-gray;
+            }
+        }
+    }
+
+    a {
+        font-weight: bold;
+        color: #006dcf;
+    }
+}
+
+table.unfixed {
+    table-layout: auto;
+}
+
+table {
+    td.long-content {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+    }
+}
+
+table.table-borderless td, tr, th {
+    border: none !important;
+}

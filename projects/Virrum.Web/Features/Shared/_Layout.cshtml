@@ -1,0 +1,48 @@
+﻿@using System.Reflection
+@using Virrum.Web.Content.resources
+@using Newtonsoft.Json
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="cacheKey" content="@Version" />
+    <link rel="apple-touch-icon" href="/Content/img/favicon.png" />
+    <link rel="shortcut icon" href="/Content/img/favicon.png" />
+    <title>@Language.AppTitle - @ViewBag.Title</title>
+    <link rel="stylesheet" href="/Content/BuiltFiles/main.css" />
+</head>
+<body>
+    <div class="container">
+        @Html.Partial("_NavBar")
+        
+        @if (IsSectionDefined("Menu"))
+        {
+            @RenderSection("Menu")
+        }
+        else
+        {
+            @Html.Partial("_Menu")
+        }
+        
+        @RenderBody()
+        
+        <div class="modal fade" data-viewmodel="Shared/ModalDialogVM" data-bind="showModal: isOpen, onModalHidden: onClose">
+            <div class="modal-dialog" data-bind="css: {'modal-dialog-wide': shouldBeWide}">
+                <div class="modal-content" data-bind="template: { name: templateName, data: data, if:isOpen }">
+
+                </div>
+            </div>
+        </div>
+
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @Language.Company - Versjon @ViewContext.Controller.GetType().Assembly.GetName().Version (@File.GetCreationTime(ViewContext.Controller.GetType().Assembly.Location))</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+    <script src="../../Scripts/BuiltFiles/promise.js"></script>
+    @Scripts.Render("/Scripts/BuiltFiles/main.js")
+</body>
+</html>

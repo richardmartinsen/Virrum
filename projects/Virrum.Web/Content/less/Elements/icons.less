@@ -1,0 +1,153 @@
+﻿.booking-icon {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: -3px;
+    background-repeat: no-repeat;
+}
+
+.small-icon {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-repeat: no-repeat;
+}
+
+.loading-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-right: -5px;
+    margin-bottom: 0px;
+    background: url('/Content/img/spinner.gif') no-repeat center;
+    background-repeat: no-repeat;
+}
+
+.blacklist-icon {
+    text-align: right;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: -3px;
+    background-image: url("/Content/svg/skull-black.svg");
+
+    .list-group-item-heading > & {
+        float: right;
+    }
+
+    .list-group-item.active > .list-group-item-heading > & {
+        float: right;
+        background-image: url("/Content/svg/skull-black.svg");
+    }
+}
+
+.blacklist-icon-white {
+    text-align: right;
+    vertical-align: middle;
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 3px;
+    background-image: url("/Content/svg/skull-white.svg");
+}
+
+.warning {
+    background-image: url("/Content/svg/warning.svg");
+}
+
+.has-more-groups {
+    background-image: url("/Content/svg/more-groups.svg");
+}
+
+.car {
+    background-image: url("/Content/svg/car-booked.svg");
+
+    &.booked {
+        background-image: url("/Content/svg/car-booked.svg");
+    }
+
+    &.available {
+        background-image: url("/Content/svg/car-empty.svg");
+    }
+
+    &.no-show {
+        background-image: url("/Content/svg/car-ghost.svg");
+    }
+
+    &.no-show-student {
+        background-image: url("/Content/svg/car-half-empty.svg");
+    }
+}
+
+.mc {
+    background-image: url("/Content/svg/mc-booked.svg");
+
+    &.booked {
+        background-image: url("/Content/svg/mc-booked.svg");
+    }
+
+    &.no-show {
+        background-image: url("/Content/svg/mc-ghost.svg");
+    }
+
+    &.no-show-student {
+        background-image: url("/Content/svg/mc-half-empty.svg");
+    }
+
+    &.available {
+        background-image: url("/Content/svg/mc-empty.svg");
+    }
+}
+
+.caret-right {
+    background-image: url("/Content/svg/caret-right.svg");
+}
+
+.caret-down {
+    background-image: url("/Content/svg/caret-down.svg");
+}
+
+.plus {
+    background-image: url("/Content/svg/button-plus.svg");
+}
+
+.minus {
+    background-image: url("/Content/svg/button-minus.svg");
+}
+
+.phone {
+    background-image: url("/Content/svg/phone.svg");
+}
+
+.mail {
+    background-image: url("/Content/svg/mail.svg");
+}
+
+.close-icon {
+    &:extend(.glyphicon all);
+    &:extend(.glyphicon-remove all);
+
+    &:hover, &:focus {
+        text-decoration: none;
+    }
+}

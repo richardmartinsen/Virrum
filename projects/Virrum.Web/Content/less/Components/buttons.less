@@ -1,0 +1,54 @@
+﻿.btn.btn-icon {
+  color: black;
+  background: none;
+  border: none;
+
+  &.no-padding{
+      padding: 0;
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    color: black;
+    border-color: darken(white, 12%);
+    outline: 0;
+  }
+  &:active,
+  &.active,
+  .open .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        border-color: darken(white, 12%);
+    }
+  }
+}
+
+.btn.chosen {
+  background: @vir-gray-dark;
+  color: white;
+}
+
+.btn-group {
+    .dropdown-toggle:hover + .dropdown-menu,
+    .dropdown-menu:hover {
+        display: block;
+    }
+    &.loading {
+        background: url('/Content/img/spinner.gif') no-repeat center;
+    }
+}
+
+.btn-centered {
+    padding: 6px 12px;
+}

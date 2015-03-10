@@ -1,0 +1,65 @@
+﻿.virrum-navbar {
+    .navbar-header {
+        > a {
+            background-color: @vir-meny-item-bg;
+
+            &:hover {
+                background-color: @vir-meny-item-bg;
+            }
+        }
+
+        .navbar-brand {
+            margin-right: 20px;
+            padding: 0;
+
+            .logo-text {
+                color: @vir-font-brown;
+                font-weight: bold;
+            }
+
+            img {
+                display: inline-block;
+                height: 100%;
+            }
+        }
+    }
+
+    .navbar-nav {
+        font-size: 14px;
+        font-weight: bold;
+
+        > li > a {
+            color: @vir-font-brown;
+
+            &:hover {
+                &:before {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 14px;
+                    right: 14px;
+                    height: 4px;
+                    background: @vir-meny-item-bg;
+                }
+            }
+        }
+
+        > .active > a {
+            color: @vir-red;
+
+            &:before {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 14px;
+                right: 14px;
+                height: 4px;
+                background: @vir-meny-item-bg;
+            }
+
+            &:hover {
+                color: @vir-red;
+            }
+        }
+    }
+}

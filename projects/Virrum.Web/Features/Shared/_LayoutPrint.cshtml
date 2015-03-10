@@ -1,0 +1,22 @@
+﻿@using Virrum.Web.Content.resources
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="cacheKey" content="@Version" />
+    @*<title>@Language.PracticeTrackBooking - @ViewBag.Title</title>*@
+    <link rel="stylesheet" href="/Content/BuiltFiles/print.css" />
+</head>
+    <body>
+        <div class="container">
+            @RenderBody()
+        </div>
+
+        <script type="text/javascript">
+            window.onload = function() {
+                window.print();
+            };
+        </script>
+    </body>
+</html>

@@ -1,0 +1,86 @@
+﻿
+
+// Loadingbar animations
+// -------------------------
+
+// Webkit
+@-webkit-keyframes loading-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+// Firefox
+@-moz-keyframes loading-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+// Opera
+@-o-keyframes loading-bar-stripes {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 40px 0;
+    }
+}
+
+// Spec and IE10+
+@keyframes loading-bar-stripes {
+    from {
+        background-position: 40px 0;
+    }
+
+    to {
+        background-position: 0 0;
+    }
+}
+
+
+.loading-bar() {
+    #gradient > .striped(@vir-green);
+    background-size: 40px 40px;
+    -webkit-animation: loading-bar-stripes 2s linear infinite;
+    -moz-animation: loading-bar-stripes 2s linear infinite;
+    -ms-animation: loading-bar-stripes 2s linear infinite;
+    -o-animation: loading-bar-stripes 2s linear infinite;
+    animation: loading-bar-stripes 2s linear infinite;
+    background-color: lighten(@vir-green, 25%);
+}
+
+.loading-bar {
+    .loading-bar();
+}
+
+div [data-outlet] {
+    position: relative;
+}
+
+div [data-outlet][data-loading=true]::after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: @panel-body-padding;
+    right: @panel-body-padding;
+    bottom: 0;
+    z-index: 10;
+    content: '';
+    .loading-bar();
+    height: 4px;
+    margin-bottom: -4px;
+}
+
+.progress-bar-vir {
+  .progress-bar-variant(@vir-green);
+}

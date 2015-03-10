@@ -1,0 +1,124 @@
+﻿@using Virrum.Web.Content.resources
+@using Virrum.Web.Features.Shared.Models
+
+<div data-viewmodel="Settings/Toolbox/Scripts/CustomBindingsVM">
+    
+<h1>CustomBindings</h1>
+
+    <h2>String Format</h2>
+    <div class="row">
+        <div class="col-md-1">
+            <span data-bind="stringFormat: { text: 'text {0} number {1}', args: [text, number] }"></span>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <label>
+                    Arg1
+                    <input type="text" data-bind="value: text, valueUpdate: 'afterkeydown'" />
+                </label>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div class="input-group">
+                <label>
+                    Arg2
+                    <input type="number" step="0.1" data-bind="value: number, valueUpdate: 'afterkeydown'" />
+                </label>
+            </div>
+        </div>
+
+    </div>
+
+    <hr />
+
+    <h2>Chosen</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <h3>Chosen button group</h3>
+            <div class="btn-group">
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansToday, value: 'pasta'">Pasta</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansToday, value: 'pizza'">Pizza</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansToday, value: 'fårikål'">Fårikål</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansToday, value: 'suppe'">Suppe</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansToday, value: 'taco'">Taco</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansToday, value: 'sushi'">Sushi</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <h3>Clearable</h3>
+            <div class="btn-group">
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansTomorrow, clearable:true, value: 'pasta'">Pasta</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansTomorrow, clearable:true, value: 'pizza'">Pizza</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansTomorrow, clearable:true, value: 'fårikål'">Fårikål</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansTomorrow, clearable:true, value: 'suppe'">Suppe</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansTomorrow, clearable:true, value: 'taco'">Taco</button>
+                <button class="btn btn-default" data-bind="chosen: dinnerPlansTomorrow, clearable:true, value: 'sushi'">Sushi</button>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <h3>ifChosen</h3>
+            <div data-bind="ifChosen: dinnerPlansTomorrow, value: 'pizza'">
+                Du har valgt pizza
+            </div>
+        </div> 
+        <div class="col-md-3">
+            <h3>Tabs</h3>
+            <ul class="nav nav-tabs">
+                <li data-bind="tab: activeTab, name:'home'"><a href="#">Home</a></li>
+                <li data-bind="tab: activeTab, name:'profile'"><a href="#">Profile</a></li>
+                <li data-bind="tab: activeTab, name:'messages'"><a href="#">Messages</a></li>
+            </ul>
+        </div> 
+    </div>
+    
+    <hr />
+    <h2>Toggle</h2>
+    <button class="btn btn-default" data-bind="toggleActive: active">Toggle</button><span data-bind="visible: active">Aktiv</span>
+    
+    <hr />
+    <h2>Text Length</h2>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="form-group">
+                <label>Skriv noe</label><span class="pull-right" data-bind="textLength: {text:longText, max:100, belowMax:'{0}/{1}', aboveMax:'{0} for mange bokstaver'}"></span>
+                <textarea data-bind="value: longText, valueUpdate:'afterkeydown'" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+
+    <h2>Datepicker</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <h4>Inline</h4>
+            <div data-bind="datepicker: date, datepickerOptions: {format: 'dd/mm/yyyy'}"></div>
+        </div>
+        <div class="col-md-3">
+            <h4>Pop-up</h4>
+            @Html.Partial("_Datepicker", new DatepickerModel("date"))
+        </div>
+        <div class="col-md-3">
+            <h4>Custom options</h4>
+             <p>For complete list, see <a href="http://bootstrap-datepicker.readthedocs.org/en/latest/options.html">here</a>.</p>
+            <p>{todayBtn: 'linked'}</p>
+            @Html.Partial("_Datepicker", new DatepickerModel("date"){ShowTodayButton = true})
+        </div>
+    </div>
+
+    <hr/>
+    <h2>Modal Dialog</h2>
+
+    <button class="btn btn-success" data-bind="click: showModalDialog">Vis popup</button>
+
+    <script type="template/knockout" id="testDialogTemplate">
+        <div class="modal-header">
+            <button type="button" class="close" data-bind="click: close" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Dette er en popup</h4>
+        </div>
+        <div class="modal-body">
+            <p data-bind="text: text"></p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-flyt-success" data-bind="click: accept">OK</button>
+        </div>
+    </script>
+</div>

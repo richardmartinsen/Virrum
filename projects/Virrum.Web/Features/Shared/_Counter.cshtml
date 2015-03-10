@@ -1,0 +1,14 @@
+﻿@model Virrum.Web.Features.Shared.Models.CounterModel
+
+<div class="virrum-counter" data-bind="with: @Model.CounterVm">
+    <button class="btn btn-icon" data-bind="click: decrement, disable: isMinValue"><span class="booking-icon minus"></span></button>
+
+    <input type="text" class="form-control" data-bind="value: value, forceRange: {value: value, minValue: minValue, maxValue: maxValue}" />
+
+    <button class="btn btn-icon" data-bind="click: increment, disable: isMaxValue"><span class="booking-icon plus"></span></button>
+
+    @if (Model.ShowValidationMessage)
+    {
+        <span data-bind="validationMessageFor: value"></span>
+    }
+</div>

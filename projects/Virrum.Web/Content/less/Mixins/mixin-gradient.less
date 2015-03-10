@@ -1,0 +1,61 @@
+﻿
+#custom-gradient
+{
+    
+    .vertical-two-colors(@startColor, @endColor, @pos1: 0%, @pos2: 100%) {
+        background-color: mix(@startColor, @endColor, 60%); // Base solid colour fallback
+        background-image: -moz-linear-gradient(top, @startColor @pos1, @endColor @pos2); // FF 3.6+
+        background-image: -ms-linear-gradient(top, @startColor @pos1, @endColor @pos2); // IE10
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor @pos1), to(@endColor @pos2)); // Safari 4+, Chrome 2+
+        background-image: -webkit-linear-gradient(top, @startColor @pos1, @endColor @pos2); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(top, @startColor @pos1, @endColor @pos2); // Opera 11.10
+        background-image: linear-gradient(top, @startColor @pos1, @endColor @pos2); // The standard
+        background-repeat: repeat-x;
+ 
+    }
+
+
+    .right-two-colors(@startColor, @endColor, @pos1: 0%, @pos2: 100%) {
+        background-color: mix(@startColor, @endColor, 60%); // Base solid colour fallback
+        background-image: -moz-linear-gradient(right, @startColor @pos1, @endColor @pos2); // FF 3.6+
+        background-image: -ms-linear-gradient(right, @startColor @pos1, @endColor @pos2); // IE10
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor @pos1), to(@endColor @pos2)); // Safari 4+, Chrome 2+
+        background-image: -webkit-linear-gradient(right, @startColor @pos1, @endColor @pos2); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(right, @startColor @pos1, @endColor @pos2); // Opera 11.10
+        background-image: linear-gradient(right, @startColor @pos1, @endColor @pos2); // The standard
+        background-repeat: repeat-x;
+ 
+    }
+
+    .two-colors(@direction, @startColor, @endColor) {
+
+
+        background-image: -moz-linear-gradient(@direction, @startColor, @endColor); // FF 3.6+
+        background-image: -ms-linear-gradient(@direction, @startColor, @endColor); // IE10
+        background-image: -webkit-linear-gradient(@direction, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+        background-image: -o-linear-gradient(@direction, @startColor, @endColor); // Opera 11.10
+        background-image: linear-gradient(@direction, @startColor, @endColor); // The standard
+ 
+    }
+
+
+
+    .vertical-four-colors( @color1: #00b3ee;
+    @color2: #7a43b6;
+    @color3: #F00;
+    @color4: #c3325f;
+    @pos1: 0%;
+    @pos2: 50%;
+    @pos3: 50%;
+    @pos4: 100%
+    )
+    {
+        //background-color: mix(@color1, @color4, 60%); // Base solid colour fallback
+        background: -moz-linear-gradient(top, @color1 @pos1, @color2 @pos2, @color3 @pos3, @color4 @pos4); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-pos(@pos1,@color1), color-pos(@pos2,@color2), color-pos(@pos3,@color3), color-pos(@pos4,@color4)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, @color1 @pos1,@color2 @pos2,@color3 @pos3,@color4 @pos4); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, @color1 @pos1,@color2 @pos2,@color3 @pos3,@color4 @pos4); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top, @color1 @pos1,@color2 @pos2,@color3 @pos3,@color4 @pos4); /* IE10+ */
+        background: linear-gradient(to bottom, @color1 @pos1,@color2 @pos2,@color3 @pos3,@color4 @pos4); /* W3C */
+    }
+}

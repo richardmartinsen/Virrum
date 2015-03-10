@@ -1,0 +1,237 @@
+﻿@{
+    ViewBag.Title = "Toolbox";
+}
+
+<h2>@ViewBag.Title</h2>
+<p>Palett med grafiske element til bruk.</p>
+<hr />
+
+<div class="row">
+    <div class="col-md-8">
+        <h3>Responsivitet</h3>
+        <h4>Størrelser:</h4>
+        <ul>
+            <li><span class="glyphicon glyphicon-ok visible-lg"></span>lg (> 7680px)</li>
+            <li><span class="glyphicon glyphicon-ok visible-md"></span>md (1200px - 7680px)</li>
+            <li><span class="glyphicon glyphicon-ok visible-sm"></span>sm (1024px - 1200px)</li>
+            <li><span class="glyphicon glyphicon-ok visible-xs"></span>xs (< 1024px)</li>
+        </ul>
+        <div class="hidden-xs">
+            <p>hidden-xs</p>
+        </div>
+        <div class="hidden-sm">
+            <p>hidden-sm</p>
+        </div>
+        <div class="hidden-md">
+            <p>hidden-md</p>
+        </div>
+        <div class="hidden-lg">
+            <p>hidden-lg</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-3">
+        <h3>Knapper</h3>
+        <form class="form-inline" role="form">
+            <div class="form-group">
+                <button class="btn btn-flyt">btn-flyt-default</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-flyt-success">btn-flyt-success</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-flyt-primary">btn-flyt-primary</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-flyt-warning">btn-flyt-warning</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-flyt-danger">btn-flyt-danger</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-flyt-info">btn-flyt-info</button>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-flyt-brand">btn-flyt-brand</button>
+            </div>
+            <hr />
+            <div class="form-group">
+                <button class="btn btn-flyt chosen">chosen</button>
+                <button class="btn btn-flyt">chosen</button>
+                <button class="btn btn-flyt">chosen</button>
+                Chosen er en knockout-databinding som får en knapp til å fungere som en radiobutton. Når knappen er selektert får den denne stylingen. Default når ikke selektert.
+            </div>
+        </form>
+    </div>
+
+    <div class="col-md-4">
+        <h3>Grupperte</h3>
+        <div class="btn-group">
+            <button class="btn btn-flyt">btn-flyt-default</button>
+            <button class="btn btn-flyt-success">btn-flyt-success</button>
+            <button class="btn btn-flyt-primary">btn-flyt-primary</button>
+            <button class="btn btn-flyt-warning">btn-flyt-warning</button>
+            <button class="btn btn-flyt-danger">btn-flyt-danger</button>
+            <button class="btn btn-flyt-info">btn-flyt-info</button>
+            <button class="btn btn-flyt-brand">btn-flyt-brand</button>
+        </div>
+    </div>
+
+    <div class="col-md-1">
+        <h3>Med ikoner</h3>
+        <button class="btn btn-flyt-success"><span class="glyphicon glyphicon-ok"></span>Ok</button>
+        <button class="btn btn-flyt-danger"><span class="glyphicon glyphicon-remove"></span>Slett</button>
+    </div>
+</div>
+
+
+<hr />
+<h2>Skjema-element</h2>
+<div class="row">
+    <div class="col-md-3">
+        <div class="panel panel-flyt">
+            <div class="panel-heading">Panel og ting inni</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" />Checkbox
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-inline">
+                        <label>
+                            <input type="checkbox" />..eller
+                        </label>
+                    </div>
+                    <div class="checkbox-inline">
+                        <label>
+                            <input type="checkbox" />inline
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="radioOptions" />og radio buttons
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="radioOptions" />slik
+                        </label>
+                    </div>
+                    <div class="radio-inline">
+                        <label>
+                            <input type="radio" name="radioOptions" />eller slik
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group pull-right">
+                    <button class="btn btn-flyt-brand">Yepsi</button>
+                    <button class="btn btn-flyt-primary">Pepsi</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="panel panel-flyt">
+            <div class="panel-heading">Panel og ting inni</div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Her er en text-input">
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-control" rows="3" placeholder="Her er et textarea"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <select class="form-control">
+                        <option selected>Her er en selectbox</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <button class="btn btn-flyt-brand">Yepsi</button>
+                <button class="btn btn-flyt-primary">Pepsi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr />
+<h2>Tabeller</h2>
+<div class="row">
+    <div class="col-md-3">
+        <table class="table table-flyt">
+            <thead>
+                <tr>
+                    <th><span class="title clickable">Dette</span></th>
+                    <th><span class="title text-center">er</span></th>
+                    <th><span class="title">en vanlig</span></th>
+                    <th><span class="title">table-flyt</span></th>
+                    <th><span class="title">tabell</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Trykk &uArr;</td>
+                    <td>Woop!</td>
+                    <td>Woop!!</td>
+                    <td>Woop!!!</td>
+                    <td>Woop!!!!</td>
+                </tr>
+                <tr>
+                    <td>Woop!!!!</td>
+                    <td>Woop!!!</td>
+                    <td>Woop!!</td>
+                    <td>Woop!</td>
+                    <td>Woop</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3">
+        <table class="table table-flyt table-bordered">
+            <thead>
+                <tr>
+                    <th><span class="title">Dette</span></th>
+                    <th colspan="2"><span class="title text-center">er en table-bordered</span></th>
+                    <th><span class="title">table-flyt</span></th>
+                    <th><span class="title">tabell</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th><span class="title">under</span></th>
+                    <th><span class="title text-center">header</span></th>
+                    <th><span class="title">for</span></th>
+                    <th><span class="title">tabellen</span></th>
+                    <th><span class="title">er fint</span></th>
+                </tr>
+                <tr>
+                    <td>Woop</td>
+                    <td>Woop!</td>
+                    <td>Woop!!</td>
+                    <td>Woop!!!</td>
+                    <td>Woop!!!!</td>
+                </tr>
+                <tr>
+                    <td>Woop!!!!</td>
+                    <td>Woop!!!</td>
+                    <td>Woop!!</td>
+                    <td>Woop!</td>
+                    <td>Woop</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

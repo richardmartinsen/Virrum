@@ -1,0 +1,16 @@
+﻿@using Virrum.Web.Content.resources
+<div data-bind="with: groupTimeVm">
+    <div class="form-group">
+        <label class="col-md-3 control-label">@Language.PointInTime</label>
+        <div class="col-md-3">
+            <input type="text" class="form-control" data-bind="value: startDisplayTime.time, disable: readOnly" />
+            <span class="error-message" data-bind="visible: startDisplayTime.error() == 'formatError'">@Language.WrongFormat</span>
+        </div>
+        <p class="form-control-static col-md-1" class="text-center"> @Language.to </p>
+        <div class="col-md-3">
+            <input type="text" class="form-control" data-bind="value: endDisplayTime.time, disable: readOnly" />
+            <span class="error-message" data-bind="visible: endDisplayTime.error() == 'formatError'">@Language.WrongFormat</span>
+        </div>
+        <span class="help-block input-sm col-lg-offset-3 col-md-9">@Language.Duration: <span data-bind="text: humanizedDuration"></span></span>
+    </div>
+</div>

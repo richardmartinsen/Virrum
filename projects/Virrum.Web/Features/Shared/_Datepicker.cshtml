@@ -1,0 +1,19 @@
+﻿@model Virrum.Web.Features.Shared.Models.DatepickerModel
+
+<div class="input-group datepicker has-feedback">
+    <input type="text" style="cursor: pointer" class="form-control datepicker-textinput" data-bind="datepicker: @(Model.ValueBindingName), datepickerOptions: {
+        weekStart: 1,
+        language: 'no',
+        format: 'dd.mm.yyyy',
+        formatForMoment: 'DD.MM.YYYY',
+        autoclose: true,
+        forceParse: false,
+        keyboardNavigation: false,
+        orientation: 'auto',
+        startDate: @(Model.StartDateBindingName),
+        endDate: @(Model.EndDateBindingName),
+        clearBtn: @(Model.ShowClearButton.ToString().ToLower())
+        @(Model.ShowTodayButton ? ",todayBtn: 'linked'" : "")
+    }" />
+    <span class="glyphicon glyphicon-calendar form-control-feedback"></span>
+</div>

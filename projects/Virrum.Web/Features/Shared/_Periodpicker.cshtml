@@ -1,0 +1,13 @@
+﻿@model string
+
+<form class="form-inline">
+    <h4>
+        <select class="form-control" data-bind="value: @(Model).selectedPeriod">
+            <option value="lastWeek" selected>Forrige uke</option>
+            <option value="lastMonth">Forrige måned</option>
+            <option value="lastSixMonths">Siste halvår</option>
+            <option value="lastYear">Inneværende år</option>
+        </select>
+        &nbsp;&nbsp;<small class="text-capitalize" data-bind="text: period.periodText"></small>
+    </h4>
+</form>
