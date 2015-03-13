@@ -1,4 +1,6 @@
-﻿namespace Virrum.Home.Contracts
+﻿using Virrum.Home.Models;
+
+namespace Virrum.Home.Contracts
 {
     using System.Collections.Generic;
 
@@ -7,5 +9,7 @@
     public interface IHomeService
     {
         User GetUser(int userId);
+
+        IEnumerable<UserDto> GetAllUsers();
     }
 }

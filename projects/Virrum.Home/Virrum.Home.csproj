@@ -64,6 +64,7 @@
     <Compile Include="Contracts\IHomeService.cs" />
     <Compile Include="HomeService.cs" />
     <Compile Include="IoCModule.cs" />
+    <Compile Include="Models\UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -72,7 +73,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Mappings\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Virrum.Data\Virrum.Data.csproj">

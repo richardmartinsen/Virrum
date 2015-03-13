@@ -1,5 +1,6 @@
 ﻿namespace Virrum.Web.Features.Home
 {
+    using Virrum.Web.Features.Home.Models;
     using System.Linq;
     using System.Web.Mvc;
 
@@ -16,16 +17,13 @@
             _homeService = homeService;
         }
 
-        //public ActionResult Index()
-        //{
-        //    return View("Views/Index", new User { Id = 1 });
-        //}
-
         //[Route("User/{userId}")]
         public ActionResult Index()
         {
-            return View();
-            //return View(_homeService.GetUser(1));
+            return View(new UsersDto
+            {
+                Users = _homeService.GetAllUsers()
+            });
         }
     }
 }

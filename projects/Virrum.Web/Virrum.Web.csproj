@@ -196,6 +196,7 @@
     <Compile Include="Features\Home\Contracts\GetUser.cs" />
     <Compile Include="Features\Home\HomeHandler.cs" />
     <Compile Include="Features\Home\HomeController.cs" />
+    <Compile Include="Features\Home\Models\UsersDto.cs" />
     <Compile Include="Features\Settings\SettingsAreaRegistration.cs" />
     <Compile Include="Features\Settings\SettingsController.cs" />
     <Compile Include="Features\Settings\Toolbox\ToolboxController.cs" />
@@ -353,7 +354,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Features\Home\Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

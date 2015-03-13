@@ -1,4 +1,8 @@
-﻿namespace Virrum.Home
+﻿using System.Collections.Generic;
+using System.Linq;
+using Virrum.Home.Models;
+
+namespace Virrum.Home
 {
     using System;
 
@@ -27,6 +31,24 @@
             {
                 return db.Users.Find(userId);
             }
+        }
+
+        public IEnumerable<UserDto> GetAllUsers()
+        {
+            using (var db = _provider.CreateContext())
+            {
+                return db.Users.Select(CreateUserDto).ToList();
+            }
+        }
+
+        private UserDto CreateUserDto(User user)
+        {
+            var userDto = new UserDto
+            {
+                Id = user.Id,
+                Name = user.Name
+            };
+            return userDto;
         }
     }
 }
