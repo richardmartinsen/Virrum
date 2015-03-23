@@ -1,4 +1,4 @@
-﻿namespace Virrum.Home.Models
+﻿namespace Virrum.Users.Models
 {
     public class UserDto
     {

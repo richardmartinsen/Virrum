@@ -10,7 +10,7 @@
         selectedGroupHasChanged: function (groupId) { },
         practiceGroupsHasChanged: function () { },
         selectedPeriodHasChanged: function () { },
-        selectedUserHasChanged: function (samAccountName) { },
+        selectedUserHasChanged: function (userId) { },
         aDrivingSchoolHasChanged: function (school) { }
     });
 });

@@ -1,7 +1,9 @@
-﻿namespace Virrum.Web.Features.Home.Models
+﻿using Virrum.Users.Models;
+
+namespace Virrum.Web.Features.Users.Models
 {
     using System.Collections.Generic;
-    using Virrum.Home.Models;
+    using Virrum.Users.Models;
     
     public class UsersDto
     {

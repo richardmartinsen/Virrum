@@ -1,4 +1,4 @@
-﻿namespace Virrum.Web.Features.Home.Contracts
+﻿namespace Virrum.Web.Features.Users.Contracts
 {
     using System.ComponentModel.DataAnnotations;
 

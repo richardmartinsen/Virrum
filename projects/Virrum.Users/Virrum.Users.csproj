@@ -7,8 +7,8 @@
     <ProjectGuid>{3E0FAA8C-467C-4B00-8D82-5AA728FE27C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Virrum.Home</RootNamespace>
-    <AssemblyName>Virrum.Home</AssemblyName>
+    <RootNamespace>Virrum.Users</RootNamespace>
+    <AssemblyName>Virrum.Users</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
@@ -61,8 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IHomeService.cs" />
-    <Compile Include="HomeService.cs" />
+    <Compile Include="Contracts\IUsersService.cs" />
+    <Compile Include="UsersService.cs" />
     <Compile Include="IoCModule.cs" />
     <Compile Include="Models\UserDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

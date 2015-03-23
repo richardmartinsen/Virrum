@@ -1,35 +1,34 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Virrum.Home.Models;
-
-namespace Virrum.Home
+﻿namespace Virrum.Users
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using Virrum.Users.Models;
     using System;
 
     using Data.Contracts;
     using Data.Extensions;
 
     using Virrum.Data.Models;
-    using Virrum.Home.Contracts;
+    using Virrum.Users.Contracts;
 
-    public class HomeService : IHomeService
+    public class UsersService : IUsersService
     {
         //  private readonly ISystemTime _systemTime;
 
         private readonly IVirrumDbProvider _provider;
 
-        //  public HomeService(IVirrumDbProvider provider, ISystemTime systemTime)
-        public HomeService(IVirrumDbProvider provider)
+        //  public UsersService(IVirrumDbProvider provider, ISystemTime systemTime)
+        public UsersService(IVirrumDbProvider provider)
         {
             //_systemTime = systemTime;
             _provider = provider;
         }
 
-        public User GetUser(int userId)
+        public UserDto GetUser(int userId)
         {
             using (var db = _provider.CreateContext())
             {
-                return db.Users.Find(userId);
+                return CreateUserDto(db.Users.Find(userId));
             }
         }
 

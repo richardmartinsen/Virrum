@@ -1,14 +1,14 @@
-﻿namespace Virrum.Home
+﻿namespace Virrum.Users
 {
     using Autofac;
 
-    using Virrum.Home.Contracts;
+    using Virrum.Users.Contracts;
 
     public class IoCModule : Module
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<HomeService>().As<IHomeService>();
+            builder.RegisterType<UsersService>().As<IUsersService>();
         }
     }
 
