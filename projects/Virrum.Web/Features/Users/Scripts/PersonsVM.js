@@ -9,7 +9,7 @@
     proclaim,
     Person
 ) {
-    return function UsersVM(model, when) {
+    return function PersonsVM(model, when) {
         var self = this;
         console.log(model);
         this.searchtxt = ko.observable("");
@@ -27,7 +27,8 @@
 
         this.selectUser = function (user) {
             proclaim.selectedUserHasChanged(user.id);
-            document.location.href = "#/UserDetails/" + user.id;
+            //document.location.href = "#/Users/UserDetails?userId=" + user.id;
+            document.location.href = "#/PersonDetails/" + user.id;
         };
 
         init: {

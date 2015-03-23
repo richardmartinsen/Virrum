@@ -18,7 +18,7 @@
 
         //this.url = '#!Users/UserDetails?userId=' + self.id;
         this.url = '#!PersonDetails/' + self.id;
-        this.selectUser = function() {
+        this.selectPerson = function() {
             proclaim.selectedUserHasChanged(self.id);
             document.location.hash = self.url;
         };

@@ -13,6 +13,8 @@ namespace Virrum.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+
             routes.MapRoute(
                 name: "QVC",
                 url: "qvc/{action}/{*name}",
@@ -21,7 +23,7 @@ namespace Virrum.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "fffUsers", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Users", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

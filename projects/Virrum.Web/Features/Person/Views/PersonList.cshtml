@@ -1,6 +1,6 @@
-﻿@model Virrum.Web.Features.Users.Models.UsersDto
+﻿@model Virrum.Web.Features.Person.Models.PersonsDto
 
-<div data-viewmodel="Users/Scripts/UsersVM" data-model="@Json(Model)">
+<div data-viewmodel="Person/Scripts/PersonsVM" data-model="@Json(Model)">
     @*<div class="row">
             <div class="well">
                 <form class="form-horizontal">
@@ -22,7 +22,7 @@
                     <table class="table table-virrum table-borderless">
                         <tbody data-bind="foreach: filteredPersons ">
                             <tr class="clickable" data-bind="css: {chosen: isSelected}">
-                                <td data-bind="click: selectUser, text: name"></td>
+                                <td data-bind="click: selectPerson, text: name"></td>
                                 @*<td class="list-title"><span data-bind="text: name"></span></td>*@
                             </tr>
                         </tbody>

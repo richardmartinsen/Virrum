@@ -17,19 +17,24 @@
             _usersService = usersService;
         }
 
-        //[Route("User/{userId}")]
-        public ActionResult Index()
-        {
-            return View(new UsersDto
-            {
-                Users = _usersService.GetAllUsers()
-            });
-        }
+        ////[Route("User/{userId}")]
+        //public ActionResult Index()
+        //{
+        //    return RedirectToAction("PersonList");
+        //}
 
-        [Route("Users/UserDetails/{userId}")]
-        public ActionResult UserDetails(int userId)
-        {
-            return View("Views/UserDetails", _usersService.GetUser(userId));
-        }
+        //public ActionResult PersonList()
+        //{
+        //    return View(new UsersDto
+        //    {
+        //        Users = _usersService.GetAllUsers()
+        //    });
+        //}
+
+        //[Route("PersonDetails/{userId}")]
+        //public ActionResult PersonDetails(int userId)
+        //{
+        //    return View("Views/PersonDetails", _usersService.GetUser(userId));
+        //}
     }
 }
