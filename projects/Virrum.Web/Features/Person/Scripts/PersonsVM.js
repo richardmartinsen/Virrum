@@ -28,7 +28,7 @@
         this.selectPerson = function (user) {
             proclaim.selectedUserHasChanged(user.id);
             //document.location.href = "#/Users/UserDetails?userId=" + user.id;
-            document.location.href = "#/PersonDetails/" + user.id;
+            document.location.href = "/PersonDetails/" + user.id;
         };
 
         init: {
