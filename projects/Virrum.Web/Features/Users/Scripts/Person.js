@@ -7,7 +7,7 @@
     qvc,
     event
 ) {
-    return function Person(model) {
+    return function Person(model, when) {
         var self = this;
         var proclaim = event;
 
@@ -24,7 +24,7 @@
 
         init: {
             self.isSelected(self.url == document.location.hash);
-            when(event.selectedUserHasChanged, function(userId) {
+            when(event.selectedUserHasChanged, function (userId) {
                 self.isSelected(userId == self.id);
             });
         }

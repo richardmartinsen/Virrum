@@ -26,7 +26,7 @@
             });
         }
 
-        [Route("UserDetails/{userId}")]
+        [Route("Users/UserDetails/{userId}")]
         public ActionResult UserDetails(int userId)
         {
             return View("Views/UserDetails", _usersService.GetUser(userId));

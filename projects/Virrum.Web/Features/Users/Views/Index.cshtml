@@ -21,8 +21,9 @@
                 <div class="panel-body">
                     <table class="table table-virrum table-borderless">
                         <tbody data-bind="foreach: filteredPersons ">
-                            <tr class="clickable">
-                                <td class="list-title"><span data-bind="text: name"></span></td>
+                            <tr class="clickable" data-bind="css: {chosen: isSelected}">
+                                <td data-bind="click: selectUser, text: name"></td>
+                                @*<td class="list-title"><span data-bind="text: name"></span></td>*@
                             </tr>
                         </tbody>
                     </table>

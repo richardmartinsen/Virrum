@@ -13,8 +13,6 @@
         var self = this;
         console.log(model);
         this.searchtxt = ko.observable("");
-        //this.id = ko.observable(1);
-        //this.name = ko.observable("asdfasdf").extend({ dirty: false });
         console.log("stestef");
         this.persons = ko.observableArray(model.users.map(function (person) {
             console.log(person);
@@ -27,14 +25,13 @@
             });
         });
 
-        //this.getuser = qvc.createQuery("GetUser", {
-        //    id: ko.observable(this.id)
-        //}).result(function (result) {
-        //    self.name(result.name);
-        //});
+        this.selectUser = function (user) {
+            proclaim.selectedUserHasChanged(user.id);
+            document.location.href = "#/UserDetails/" + user.id;
+        };
 
         init: {
-            //self.getuser();
+            //
         }
 
     };
