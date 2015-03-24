@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{9F811B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virrum.Data", "projects\Virrum.Data\Virrum.Data.csproj", "{49D9A69B-C56E-42E3-A03E-48B56DC55D47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virrum.Users", "projects\Virrum.Users\Virrum.Users.csproj", "{3E0FAA8C-467C-4B00-8D82-5AA728FE27C0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Virrum.Person", "projects\Virrum.Users\Virrum.Person.csproj", "{3E0FAA8C-467C-4B00-8D82-5AA728FE27C0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qvc", "projects\Qvc\Qvc.csproj", "{703CC9FE-D0C9-4861-94C7-3E0D96081E4F}"
 EndProject

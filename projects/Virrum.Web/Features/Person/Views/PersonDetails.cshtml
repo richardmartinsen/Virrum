@@ -1,4 +1,4 @@
-﻿@model Virrum.Users.Models.UserDto
+﻿@model Virrum.Person.Models.PersonDto
 
 @{
     ViewBag.Title = "PersonDetails";
@@ -9,5 +9,6 @@
         <h4 class="panel-title">
             Bruker @Model.Name
         </h4>
+        <a class="btn btn-default pull-right" href="#/PersonEdit/@Model.Id">Endre</a>
     </div>
 </div>

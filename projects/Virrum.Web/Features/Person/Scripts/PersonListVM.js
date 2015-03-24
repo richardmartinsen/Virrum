@@ -2,19 +2,19 @@
     'knockout',
     'deco/qvc',
     'Shared/globalEvents',
-    'Users/Scripts/Person'
+    'Person/Scripts/Person'
 ], function (
     ko,
     qvc,
     proclaim,
     Person
 ) {
-    return function PersonsVM(model, when) {
+    return function PersonListVM(model, when) {
         var self = this;
         console.log(model);
         this.searchtxt = ko.observable("");
         console.log("stestef");
-        this.persons = ko.observableArray(model.users.map(function (person) {
+        this.persons = ko.observableArray(model.persons.map(function (person) {
             console.log(person);
             return new Person(person, when);
         }));
@@ -25,10 +25,10 @@
             });
         });
 
-        this.selectUser = function (user) {
+        this.selectPerson = function (user) {
             proclaim.selectedUserHasChanged(user.id);
             //document.location.href = "#/Users/UserDetails?userId=" + user.id;
-            document.location.href = "#/PersonDetails/" + user.id;
+            document.location.href = "/PersonDetails/" + user.id;
         };
 
         init: {

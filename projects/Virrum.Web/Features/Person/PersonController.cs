@@ -6,15 +6,15 @@
 
     using Virrum.Data.Contracts;
     using Virrum.Data.Models;
-    using Virrum.Users.Contracts;
+    using Virrum.Person.Contracts;
 
     public class PersonController : Controller
     {
-        private readonly IUsersService _usersService;
+        private readonly IPersonService _personService;
 
-        public PersonController(IUsersService usersService)
+        public PersonController(IPersonService personService)
         {
-            _usersService = usersService;
+            _personService = personService;
         }
 
         //[Route("User/{userId}")]
@@ -25,16 +25,22 @@
 
         public ActionResult PersonList()
         {
-            return View(new PersonsDto
+            return View(new PersonsListDto
             {
-                Persons = _usersService.GetAllUsers()
+                Persons = _personService.GetAllUsers()
             });
         }
 
         [Route("PersonDetails/{userId}")]
         public ActionResult PersonDetails(int userId)
         {
-            return View("Views/PersonDetails", _usersService.GetUser(userId));
+            return View("Views/PersonDetails", _personService.GetUser(userId));
+        }
+
+        [Route("PersonEdit/{userId}")]
+        public ActionResult PersonEdit(int userId)
+        {
+            return View("Views/PersonEdit", _personService.GetUser(userId));
         }
     }
 }

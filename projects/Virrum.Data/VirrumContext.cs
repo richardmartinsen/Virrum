@@ -30,7 +30,7 @@ namespace Virrum.Data
         /// <summary>
         /// Gets or sets the users.
         /// </summary>
-        public IDbSet<User> Users { get; set; }
+        public IDbSet<Person> Persons { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

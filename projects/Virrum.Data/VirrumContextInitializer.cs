@@ -15,17 +15,17 @@
     {
         public static void Seed(IVirrumContext context)
         {
-            SeedUser(context);
+            SeedPerson(context);
         }
 
-        public static void SeedUser(IVirrumContext context)
+        public static void SeedPerson(IVirrumContext context)
         {
-            context.Users.AddRange(
-                new Collection<User>
+            context.Persons.AddRange(
+                new Collection<Person>
                     {
-                        new User
+                        new Person
                             {
-                                Name = "Navn"
+                                Name = "Fornavn Etternavn"
                             }
                     });
 

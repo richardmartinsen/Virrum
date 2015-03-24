@@ -1,0 +1,21 @@
+﻿@model Virrum.Person.Models.PersonDto
+
+@{
+    ViewBag.Title = "PersonEdit";
+}
+
+<div class="panel panel-virrum" data-viewmodel="Person/Scripts/PersonVM" data-model="@Json(Model)">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            Bruker @Model.Name
+        </h4>
+    </div>
+    <div class="panel-body">
+        <form>
+            <div class="col-md-6">
+                <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+            </div>
+            <input type="submit" class="btn btn-success" data-bind="click: saveCommand" value="Lagre" />
+        </form>
+    </div>
+</div>

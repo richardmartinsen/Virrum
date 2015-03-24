@@ -1,6 +1,4 @@
-﻿using Virrum.Web.Features.Person.Models;
-
-namespace Virrum.Web.Features.Person
+﻿namespace Virrum.Web.Features.Person
 {
     using Virrum.Web.Features.Person.Models;
     using System.Web.Mvc;
@@ -9,21 +7,26 @@ namespace Virrum.Web.Features.Person
     using Qvc.Handler;
 
     using Virrum.Data.Models;
-    using Virrum.Users.Contracts;
+    using Virrum.Person.Contracts;
     using Virrum.Web.Features.Person.Contracts;
 
-    public class UsersHandler : IHandleQuery<GetPerson, PersonsDto>
+    public class UsersHandler : IHandleQuery<GetPerson, PersonsDto>, IHandleCommand<SavePerson>
     {
-        private readonly IUsersService _usersService;
+        private readonly IPersonService _personService;
 
-        public UsersHandler(IUsersService usersService)
+        public UsersHandler(IPersonService personService)
         {
-            _usersService = usersService;
+            _personService = personService;
         }
 
         public PersonsDto Handle(GetPerson query)
         {
-            return new PersonsDto(); // _usersService.GetUser(query.Id);
+            return new PersonsDto(); // _personService.GetUser(query.Id);
+        }
+
+        public void Handle(SavePerson command)
+        {
+            _personService.SavePerson(command.Id, command.Name);
         }
     }
 }

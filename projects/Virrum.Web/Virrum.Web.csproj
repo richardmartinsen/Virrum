@@ -193,14 +193,12 @@
       <DependentUpon>Language.resx</DependentUpon>
     </Compile>
     <Compile Include="Extensions\HtmlExtension.cs" />
+    <Compile Include="Features\Person\Contracts\SavePerson.cs" />
     <Compile Include="Features\Person\Contracts\GetPersons.cs" />
+    <Compile Include="Features\Person\Models\PersonsListDto.cs" />
     <Compile Include="Features\Person\Models\PersonDto.cs" />
     <Compile Include="Features\Person\PersonController.cs" />
     <Compile Include="Features\Person\PersonHandler.cs" />
-    <Compile Include="Features\Users\Contracts\GetUser.cs" />
-    <Compile Include="Features\Users\UsersHandler.cs" />
-    <Compile Include="Features\Users\UsersController.cs" />
-    <Compile Include="Features\Users\Models\UsersDto.cs" />
     <Compile Include="Features\Settings\SettingsAreaRegistration.cs" />
     <Compile Include="Features\Settings\SettingsController.cs" />
     <Compile Include="Features\Settings\Toolbox\ToolboxController.cs" />
@@ -256,9 +254,8 @@
     <Content Include="Content\svg\warning.svg" />
     <Content Include="favicon.ico" />
     <Content Include="Features\Person\Scripts\Person.js" />
-    <Content Include="Features\Person\Scripts\PersonsVM.js" />
-    <Content Include="Features\Users\Scripts\Person.js" />
-    <Content Include="Features\Users\Scripts\PersonsVM.js" />
+    <Content Include="Features\Person\Scripts\PersonVM.js" />
+    <Content Include="Features\Person\Scripts\PersonListVM.js" />
     <Content Include="Features\Settings\Toolbox\Scripts\CustomBindingsVM.js" />
     <Content Include="Features\Settings\Toolbox\Scripts\DialogContentVM.js" />
     <Content Include="Features\Shared\CounterVM.js" />
@@ -268,7 +265,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Features\Users\Views\PersonList.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -313,9 +309,9 @@
     <Content Include="Content\less\virrum-bootstrap-theme.less" />
     <Content Include="Scripts\BuiltFiles\deco.js.map" />
     <Content Include="Scripts\BuiltFiles\main.js.map" />
-    <Content Include="Features\Users\Views\PersonDetails.cshtml" />
     <Content Include="Features\Person\Views\PersonDetails.cshtml" />
     <Content Include="Features\Person\Views\PersonList.cshtml" />
+    <Content Include="Features\Person\Views\PersonEdit.cshtml" />
     <None Include="Scripts\jquery-2.1.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -378,9 +374,9 @@
       <Project>{49D9A69B-C56E-42E3-A03E-48B56DC55D47}</Project>
       <Name>Virrum.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Virrum.Users\Virrum.Users.csproj">
+    <ProjectReference Include="..\Virrum.Users\Virrum.Person.csproj">
       <Project>{3E0FAA8C-467C-4B00-8D82-5AA728FE27C0}</Project>
-      <Name>Virrum.Users</Name>
+      <Name>Virrum.Person</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

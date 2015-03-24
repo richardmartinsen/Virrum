@@ -61,10 +61,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IUsersService.cs" />
-    <Compile Include="UsersService.cs" />
+    <Compile Include="Contracts\IPersonService.cs" />
+    <Compile Include="PersonService.cs" />
     <Compile Include="IoCModule.cs" />
-    <Compile Include="Models\UserDto.cs" />
+    <Compile Include="Models\PersonDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

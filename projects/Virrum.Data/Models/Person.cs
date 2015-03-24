@@ -15,7 +15,7 @@ namespace Virrum.Data.Models
     /// <summary>
     /// The user.
     /// </summary>
-    public class User
+    public class Person
     {
         /// <summary>
         /// Gets or sets the id.

@@ -7,7 +7,7 @@
 
     public interface IVirrumContext : IDisposable
     {
-        IDbSet<User> Users { get; set; }
+        IDbSet<Person> Persons { get; set; }
 
         int SaveChanges();
     }

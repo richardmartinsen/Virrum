@@ -3,10 +3,8 @@
     using System.Collections.Generic;
     using Virrum.Person.Models;
     
-    public class PersonsDto
+    public class PersonsListDto
     {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
+        public IEnumerable<PersonDto> Persons { get; set; }
     }
 }

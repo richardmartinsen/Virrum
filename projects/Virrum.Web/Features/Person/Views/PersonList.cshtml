@@ -1,17 +1,6 @@
-﻿@model Virrum.Web.Features.Person.Models.PersonsDto
+﻿@model Virrum.Web.Features.Person.Models.PersonsListDto
 
-<div data-viewmodel="Person/Scripts/PersonsVM" data-model="@Json(Model)">
-    @*<div class="row">
-            <div class="well">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <div class="col-md-12">
-                            <input type="search" class="form-control" placeholder="Filter..." data-bind="value: searchtxt, valueUpdate: 'afterkeydown'" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>*@
+<div data-viewmodel="Person/Scripts/PersonListVM" data-model="@Json(Model)">
     <div class="row">
         <div class="col-md-3">
             <div class="panel panel-virrum">
@@ -23,7 +12,6 @@
                         <tbody data-bind="foreach: filteredPersons ">
                             <tr class="clickable" data-bind="css: {active: isSelected}">
                                 <td data-bind="click: selectPerson, text: name"></td>
-                                @*<td class="list-title"><span data-bind="text: name"></span></td>*@
                             </tr>
                         </tbody>
                     </table>

@@ -1,6 +1,6 @@
-﻿namespace Virrum.Users.Models
+﻿namespace Virrum.Person.Models
 {
-    public class UserDto
+    public class PersonDto
     {
         public int Id { get; set; }
 
