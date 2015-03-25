@@ -56,6 +56,37 @@
             }
         }
 
+        public void CreatePerson(string name)
+        {
+            using (var db = _provider.CreateContext())
+            {
+                db.Persons.Add(
+                    new Person
+                    {
+                        Name = name
+                    }
+                    );
+
+                db.SaveChanges();
+            }
+        }
+
+        public void DeletePerson(int personId)
+        {
+            using (var db = _provider.CreateContext())
+            {
+                var person = db.Persons.Find(personId);
+                if (person == null)
+                {
+                    return;
+                }
+
+                db.Persons.Remove(person);
+
+                db.SaveChanges();
+            }
+        }
+
         private PersonDto CreatePersonDto(Person person)
         {
             var personDto = new PersonDto

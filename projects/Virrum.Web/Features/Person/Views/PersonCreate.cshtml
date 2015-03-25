@@ -1,13 +1,11 @@
-﻿@model Virrum.Person.Models.PersonDto
-
-@{
-    ViewBag.Title = "PersonEdit";
+﻿@{
+    ViewBag.Title = "PersonCreate";
 }
 
-<div class="panel panel-virrum" data-viewmodel="Person/Scripts/PersonVM" data-model="@Json(Model)">
+<div class="panel panel-virrum" data-viewmodel="Person/Scripts/CreatePersonVM" data-model="@Json(Model)">
     <div class="panel-heading">
         <h4 class="panel-title">
-            Bruker @Model.Name
+            Ny Bruker
         </h4>
     </div>
     <div class="panel-body">
@@ -15,7 +13,7 @@
             <div class="col-md-6">
                 <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
             </div>
-            <input type="submit" class="btn btn-success" data-bind="click: savePerson" value="Lagre" />
+            <input type="submit" class="btn btn-success" data-bind="click: createPerson" value="Lagre" />
         </form>
     </div>
 </div>

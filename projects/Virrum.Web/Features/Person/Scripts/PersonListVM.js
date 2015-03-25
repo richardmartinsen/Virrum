@@ -25,9 +25,13 @@
             });
         });
 
+        this.newPerson = function () {
+            //proclaim.selectedUserHasChanged(undefined);
+            document.location.href = '#/PersonCreate';
+        }
+
         this.selectPerson = function (user) {
             proclaim.selectedUserHasChanged(user.id);
-            //document.location.href = "#/Users/UserDetails?userId=" + user.id;
             document.location.href = "/PersonDetails/" + user.id;
         };
 

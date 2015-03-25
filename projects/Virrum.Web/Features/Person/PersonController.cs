@@ -42,5 +42,11 @@
         {
             return View("Views/PersonEdit", _personService.GetUser(userId));
         }
+
+        [Route("PersonCreate")]
+        public ActionResult PersonCreate()
+        {
+            return View("Views/PersonCreate");
+        }
     }
 }

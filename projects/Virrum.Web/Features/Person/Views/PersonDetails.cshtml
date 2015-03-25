@@ -4,11 +4,13 @@
     ViewBag.Title = "PersonDetails";
 }
 
-<div class="panel panel-virrum">
+<div class="panel panel-virrum" data-viewmodel="Person/Scripts/PersonVM" data-model="@Json(Model)">
     <div class="panel-heading">
         <h4 class="panel-title">
             Bruker @Model.Name
         </h4>
         <a class="btn btn-default pull-right" href="#/PersonEdit/@Model.Id">Endre</a>
+        <a class="btn btn-default" data-bind="click: deletePerson">Slett</a>
+
     </div>
 </div>

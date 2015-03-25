@@ -10,7 +10,7 @@
     using Virrum.Person.Contracts;
     using Virrum.Web.Features.Person.Contracts;
 
-    public class UsersHandler : IHandleQuery<GetPerson, PersonsDto>, IHandleCommand<SavePerson>
+    public class UsersHandler : IHandleQuery<GetPerson, PersonsDto>, IHandleCommand<SavePerson>, IHandleCommand<CreatePerson>, IHandleCommand<DeletePerson>
     {
         private readonly IPersonService _personService;
 
@@ -27,6 +27,16 @@
         public void Handle(SavePerson command)
         {
             _personService.SavePerson(command.Id, command.Name);
+        }
+
+        public void Handle(CreatePerson command)
+        {
+            _personService.CreatePerson(command.Name);
+        }
+
+        public void Handle(DeletePerson command)
+        {
+            _personService.DeletePerson(command.Id);
         }
     }
 }

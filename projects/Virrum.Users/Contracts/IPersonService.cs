@@ -12,5 +12,9 @@
         IEnumerable<PersonDto> GetAllUsers();
 
         void SavePerson(int personId, string name);
+
+        void CreatePerson(string name);
+
+        void DeletePerson(int id);
     }
 }
