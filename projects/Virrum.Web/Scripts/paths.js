@@ -35,10 +35,10 @@
         list: function () {
             var all = [];
             for (var file in this.files) {
-                all.push(this.files[file].replace('..', 'projects/BaneBook.Web') + '.js');
+                all.push(this.files[file].replace('..', 'projects/Virrum.Web') + '.js');
             }
             for (var folder in this.folders) {
-                all.push(this.folders[folder].replace('..', 'projects/BaneBook.Web') + '/**/*.js');
+                all.push(this.folders[folder].replace('..', 'projects/Virrum.Web') + '/**/*.js');
             }
             return all;
         }

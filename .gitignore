@@ -183,7 +183,7 @@ UpgradeLog*.htm
 FakesAssemblies/
 
 # Custom files and folders
-/projects/BaneBook.Web/bower_components
+/projects/Virrum.Web/bower_components
 BuiltFiles
-/projects/BaneBook.Web/Scripts/BuiltFiles
+/projects/Virrum.Web/Scripts/BuiltFiles
 BuiltFiles
