@@ -1,16 +1,34 @@
-﻿@model Virrum.Person.Models.PersonDto
+﻿@using Virrum.Web.Content.resources
+@model Virrum.Person.Models.PersonDto
 
 @{
     ViewBag.Title = "PersonDetails";
 }
 
-<div class="panel panel-virrum" data-viewmodel="Person/Scripts/PersonVM" data-model="@Json(Model)">
+<div class="panel panel-default" data-viewmodel="Person/Scripts/PersonVM" data-model="@Json(Model)">
     <div class="panel-heading">
-        <h4 class="panel-title">
-            Bruker @Model.Name
-        </h4>
-        <a class="btn btn-default pull-right" href="#/PersonEdit/@Model.Id">Endre</a>
-        <a class="btn btn-default" data-bind="click: deletePerson">Slett</a>
-
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="panel-title">
+                    @Model.Name
+                </h4>
+            </div>
+            <div class="col-md-4">
+                <a class="btn btn-danger pull-right" data-bind="click: deletePerson"><i class="close-icon"></i>Slett</a>
+                <a class="btn btn-default pull-right" href="#/PersonEdit/@Model.Id">Endre</a>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-3 control-label">Her kommer det noe...</label>
+                        <div class="col-md-3"><p class="form-control-static">Noe...</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

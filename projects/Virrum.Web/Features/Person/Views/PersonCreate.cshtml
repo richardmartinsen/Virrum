@@ -2,18 +2,35 @@
     ViewBag.Title = "PersonCreate";
 }
 
-<div class="panel panel-virrum" data-viewmodel="Person/Scripts/CreatePersonVM" data-model="@Json(Model)">
+<div class="panel panel-default" data-viewmodel="Person/Scripts/CreatePersonVM" data-model="@Json(Model)">
     <div class="panel-heading">
-        <h4 class="panel-title">
-            Ny Bruker
-        </h4>
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="panel-title">
+                    Ny Person
+                </h4>
+            </div>
+        </div>
     </div>
     <div class="panel-body">
-        <form>
-            <div class="col-md-6">
-                <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">Navn</label>
+                        <div class="col-md-6">
+                            <input type="text" data-bind="value: name, valueUpdate: 'afterkeydown'" />
+                        </div>
+                        <div class="col-md-3">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <input type="submit" class="btn btn-success" data-bind="click: createPerson" value="Lagre" />
-        </form>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" class="btn btn-success pull-right" data-bind="click: createPerson" value="Lagre" />
+            </div>
+        </div>
     </div>
 </div>
