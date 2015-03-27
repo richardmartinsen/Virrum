@@ -6,7 +6,10 @@
     {
         public IVirrumContext CreateContext()
         {
-            return new VirrumContext();
+            var con = new VirrumContext();
+            con.Configuration.ProxyCreationEnabled = false;
+            return con;
+            //return new VirrumContext();
         }
 
     }

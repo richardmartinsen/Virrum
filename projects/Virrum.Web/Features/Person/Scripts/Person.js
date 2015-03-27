@@ -27,12 +27,12 @@
             self.isSelected(self.url == document.location.hash);
             when(event.selectedUserHasChanged, function (userId) {
                 self.isSelected(userId == self.id);
-                console.log(self.isSelected());
-                console.log(self.url);
-                console.log(document.location.hash);
-                console.log(document.location.href);
-                console.log(userId);
-                console.log(self.id);
+                //console.log(self.isSelected());
+                //console.log(self.url);
+                //console.log(document.location.hash);
+                //console.log(document.location.href);
+                //console.log(userId);
+                //console.log(self.id);
             });
         }
 

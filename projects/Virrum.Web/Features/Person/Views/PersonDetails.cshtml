@@ -14,7 +14,7 @@
                 </h4>
             </div>
             <div class="col-md-4">
-                <a class="btn btn-danger pull-right" data-bind="click: deletePerson"><i class="close-icon"></i>Slett</a>
+                <a class="btn btn-danger pull-right" data-bind="click: deletePerson">@*<i class="close-icon">*@</i>Slett</a>
                 <a class="btn btn-default pull-right" href="#/PersonEdit/@Model.Id">Endre</a>
             </div>
         </div>
@@ -24,8 +24,8 @@
             <div class="col-md-12">
                 <div class="form-horizontal">
                     <div class="form-group">
-                        <label class="col-md-3 control-label">Her kommer det noe...</label>
-                        <div class="col-md-3"><p class="form-control-static">Noe...</p></div>
+                        <label class="col-md-3 control-label">Stilling</label>
+                        <div class="col-md-9"><p class="form-control-static" data-bind="text: positions"></p></div>
                     </div>
                 </div>
             </div>

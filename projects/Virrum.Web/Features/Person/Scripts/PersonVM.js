@@ -10,20 +10,26 @@
     return function PersonVM(model, when) {
         var self = this;
 
+        this.persons = ko.observable(model.person);
         this.name = ko.observable(model.name);
         this.id = ko.observable(model.id);
         this.url = "#/PersonDetails/" + self.id();
-        console.log("id:");
-        console.log(self.id());
-        console.log(self.url);
+
+
+        //this.jobpositions = ko.observableArray(model.jobPositions.map(function (job) {
+        //    return {
+        //        position: job.position
+        //    }
+        //}));
+
+        this.positions = model.jobPositions.map(function(job) {
+            return job.position}).join(' / ');
 
         this.savePerson = qvc.createCommand("SavePerson", {
             id: self.id,
             name: self.name
         }).success(function () {
             // proclaim ??
-            console.log("hei");
-            console.log(self.url);
             document.location = self.url;
         });
 
@@ -31,8 +37,6 @@
             id: ko.computed(function () { return self.id(); })
         }).success(function () {
             // proclaim ??
-            console.log("hei");
-            console.log(self.url);
             document.location = "/#";
         });
 

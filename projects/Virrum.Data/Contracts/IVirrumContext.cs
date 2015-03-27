@@ -9,6 +9,8 @@
     {
         IDbSet<Person> Persons { get; set; }
 
+        IDbSet<JobPosition> JobPositions { get; set; }
+
         int SaveChanges();
     }
 }

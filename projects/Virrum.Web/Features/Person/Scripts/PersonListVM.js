@@ -11,11 +11,11 @@
 ) {
     return function PersonListVM(model, when) {
         var self = this;
-        console.log(model);
+        //console.log(model);
         this.searchtxt = ko.observable("");
-        console.log("stestef");
+
         this.persons = ko.observableArray(model.persons.map(function (person) {
-            console.log(person);
+            //console.log(person);
             return new Person(person, when);
         }));
 

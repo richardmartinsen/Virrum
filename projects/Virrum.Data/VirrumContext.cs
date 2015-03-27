@@ -1,13 +1,4 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="VirrumContext.cs" company="dd">
-//   
-// </copyright>
-// <summary>
-//   The virrum context.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
-
-namespace Virrum.Data
+﻿namespace Virrum.Data
 {
     using System.Data.Entity;
 
@@ -15,22 +6,15 @@ namespace Virrum.Data
     using Virrum.Data.Models;
     using System.Data.Entity.ModelConfiguration.Conventions;
 
-    /// <summary>
-    /// The virrum context.
-    /// </summary>
     public class VirrumContext : DbContext, IVirrumContext
     {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="VirrumContext"/> class.
-        /// </summary>
         public VirrumContext() : base("Virrum.Data.VirrumContext")
         {
         }
 
-        /// <summary>
-        /// Gets or sets the users.
-        /// </summary>
         public IDbSet<Person> Persons { get; set; }
+
+        public IDbSet<JobPosition> JobPositions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

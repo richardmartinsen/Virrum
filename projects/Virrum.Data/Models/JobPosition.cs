@@ -6,14 +6,14 @@ namespace Virrum.Data.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Person
+    public class JobPosition
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Position { get; set; }
 
-        public virtual ICollection<JobPosition> JobPositions { get; set; }
+        public virtual ICollection<Person> Persons { get; set; }
     }
 }

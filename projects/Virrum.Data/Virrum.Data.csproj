@@ -64,11 +64,12 @@
     <Compile Include="Contracts\IVirrumDbProvider.cs" />
     <Compile Include="Extensions\DbSetExtensions.cs" />
     <Compile Include="DropCreateVirrumContextDebugInitializer.cs" />
+    <Compile Include="Models\JobPosition.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="VirrumContextInitializer.cs" />
     <Compile Include="Extensions\SystemTime.cs" />
     <Compile Include="IoCModule.cs" />
     <Compile Include="Models\Person.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="VirrumContext.cs" />
